@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#8FA880</color>
+    <color name="colorPrimaryDark">#2F4F2F</color>
+    <color name="colorAccent">#C1CDC1</color>
+    <color name="Black">#000000</color>
+    <color name="linkBlue">#0645AD</color>
+    <color name="White">#fff</color>
+    <color name="Grey">#c3c3c3 </color>
+    <color name="Favorite_Gold">#ffd700</color>
+    <color name="Comic_Blue">#4c94f6</color>
+    <color name="Space_Purple">#682860</color>
+    <color name="Space_Blue">#502868</color>
+    <color name="Toy_Red">#960001</color>
+</resources>

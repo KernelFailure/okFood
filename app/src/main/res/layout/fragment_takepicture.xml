@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Space_Purple">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Picture"
+        android:textColor="@color/Black"
+        android:textSize="20sp"
+        android:fontFamily="serif"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="70dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
+        android:background="@drawable/rounded_corners"/>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp">
+
+        <ImageView
+            android:id="@+id/ivCameraButton"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            
+            android:src="@drawable/camera_comic_two"
+            android:background="@drawable/circle_background"
+           />
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/folder_comic"
+            android:background="@drawable/circle_background"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "730658317743",
+    "firebase_url": "https://okfood-757df.firebaseio.com",
+    "project_id": "okfood-757df",
+    "storage_bucket": "okfood-757df.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:730658317743:android:0322f95a359dafd7",
+        "android_client_info": {
+          "package_name": "com.example.leonp.okfood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "730658317743-3k85kh5n4ktunomfmmpcq5gvlslskb88.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.leonp.okfood",
+            "certificate_hash": "5740c2a113d5e01d23544fa16b55b54bf3279782"
+          }
+        },
+        {
+          "client_id": "730658317743-a9rqlsdcakeetjt7apbo6d62i1tht27j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDn90MxK9iDU8czoKg6dVsT-YFI-OK4xtg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "730658317743-a9rqlsdcakeetjt7apbo6d62i1tht27j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

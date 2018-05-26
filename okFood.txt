@@ -1,0 +1,47 @@
+// Title
+	- okFood
+
+// What this project should include 
+
+	- Firebase
+		- Database, Authentication, Notifications, Cloud Functions, Storage
+
+	- Bottom Navigation View for multiple tabs/fragments
+
+	- Take photos/read photos from memory
+		~ Perhaps be able to alter/filter photos in app
+	
+	- Have at least one view where you can endless scroll
+
+
+// Concept
+
+	- Cooking app
+
+	- "kind of like reddit and tinder had a baby that wanted to be a cooking/receipe app"
+
+	- users can post a receipe with ingredients and instructions
+	
+		~ other users can view those posts, upvote (perhaps downvote), favorite, write comments
+
+	- users will have the option to view posts in a regular news feed type of view
+	or they can set filters and preferences to match with food receipes, nearby restaurants, delivery options
+		~ completely wild idea is swiping through events that users list (sort of like food parties)
+
+// How to accomplish this 
+
+	- Firebase Database will save posts, vote-counts, comments, etc. 
+
+	- Firebase Storage will hold images/videos that users post
+
+	- Firebase Authentication will be used to let users sign in/out, have usernames
+
+	- Firebase Notifications will be sent when comments are made on posts/ a good "food match" is out there
+
+	- Firebae Cloud Functions will be used to send data to ElasticSearch
+
+	- Taking photos/reading photos from memory will be used to make posts and profile pictures
+
+	- Bottom Navigation view will be used to switch between Matching, News Feed and Profile tabs
+
+	- Endless Scroll we use when viewing the news feed tab

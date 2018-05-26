@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">okFood</string>
+
+
+    // Firebase Database Nodes
+    <string name="node_users">users</string>
+
+</resources>
