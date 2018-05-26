@@ -39,15 +39,16 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ListView
-                android:id="@+id/listView"
+            <GridView
+                android:id="@+id/gridView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                >
+                android:padding="10dp"
+                android:verticalSpacing="10dp"
+                android:numColumns="2">
 
+            </GridView>
 
-
-        </ListView>
         </android.support.v4.widget.SwipeRefreshLayout>
 
     </RelativeLayout>

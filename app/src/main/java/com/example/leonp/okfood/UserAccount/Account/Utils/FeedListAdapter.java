@@ -49,7 +49,8 @@ public class FeedListAdapter extends ArrayAdapter<Post> {
 
     static class ViewHolder{
         TextView tvTitle;
-        CircleImageView ivPostImage;
+//        CircleImageView ivPostImage;
+        ImageView ivPostImage;
         TextView tvComments;
         TextView tvFavorite;
     }
@@ -65,9 +66,11 @@ public class FeedListAdapter extends ArrayAdapter<Post> {
             holder = new ViewHolder();
 
             holder.tvTitle = (TextView) convertView.findViewById(R.id.tvTitle);
-            holder.ivPostImage = (CircleImageView) convertView.findViewById(R.id.ivPostImage);
+            holder.ivPostImage = (ImageView) convertView.findViewById(R.id.ivPostImage);
             holder.tvComments = (TextView) convertView.findViewById(R.id.tvComments);
             holder.tvFavorite = (TextView) convertView.findViewById(R.id.tvFavorite);
+
+            holder.ivPostImage.setClipToOutline(true);
 
             convertView.setTag(holder);
         } else {
@@ -106,8 +109,6 @@ public class FeedListAdapter extends ArrayAdapter<Post> {
             Uri downloadUri = Uri.parse(getItem(position).getImage_path());
             UniversalImageLoader imageLoader = new UniversalImageLoader(mContext);
             ImageLoader.getInstance().init(imageLoader.getConfig());
-
-
             UniversalImageLoader.setImage(downloadUri.toString(), holder.ivPostImage);
         } catch (NullPointerException e) {
             Log.e(TAG, "getView: NullPointerException: " + e.getMessage());

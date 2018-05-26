@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -37,7 +38,8 @@ public class FeedFragment extends Fragment {
     private static final String TAG = "FeedFragment";
 
     // widgets
-    private ListView mListView;
+//    private ListView mListView;
+    private GridView gridView;
     private SwipeRefreshLayout swipe;
     private FloatingActionButton fabCreateNewRecipe;
 
@@ -51,7 +53,7 @@ public class FeedFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_feed, container, false);
         Log.d(TAG, "onCreateView: Starting");
-        mListView = (ListView) view.findViewById(R.id.listView);
+        gridView = (GridView) view.findViewById(R.id.gridView);
         swipe = (SwipeRefreshLayout) view.findViewById(R.id.swipe);
         fabCreateNewRecipe = (FloatingActionButton) view.findViewById(R.id.fabCreateNewRecipe);
         mPostList = new ArrayList<>();
@@ -92,7 +94,7 @@ public class FeedFragment extends Fragment {
     private void getPostsFromDatabase() {
         Log.d(TAG, "getPostsFromDatabase: Starting");
         mPostList.clear();
-        mListView.setVisibility(View.INVISIBLE);
+        gridView.setVisibility(View.INVISIBLE);
 
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
         Query query = reference.child("posts");
@@ -102,15 +104,14 @@ public class FeedFragment extends Fragment {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot singleSnapshot : dataSnapshot.getChildren()) {
                     Log.d(TAG, "onDataChange: Found a snapshot");
-                    Post tempPost = new Post();
-                    tempPost = singleSnapshot.getValue(Post.class);
+                    Post tempPost = singleSnapshot.getValue(Post.class);
                     Log.d(TAG, "onDataChange: Added Post: " + tempPost.getTitle());
                     mPostList.add(tempPost);
                     mAdapter.notifyDataSetChanged();
                 }
                 Log.d(TAG, "onDataChange: Post List size: " + mPostList.size());
 
-                mListView.setVisibility(View.VISIBLE);
+                gridView.setVisibility(View.VISIBLE);
 
                 displayPosts();
                 swipe.setRefreshing(false);
@@ -168,8 +169,18 @@ public class FeedFragment extends Fragment {
 //                        + mPostList.get(i).getTitle() + " (" + mPostList.get(i).getPosition() + ")");
 //            }
 
-            mListView.setAdapter(mAdapter);
-            mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            mListView.setAdapter(mAdapter);
+//            mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//                @Override
+//                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                    Post clickedPost = mPostList.get(i);
+//                    String clickedTitle = clickedPost.getTitle();
+//                    Log.d(TAG, "onItemClick: Title of clicked post: " + clickedTitle);
+//                }
+//            });
+
+            gridView.setAdapter(mAdapter);
+            gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                     Post clickedPost = mPostList.get(i);
