@@ -49,7 +49,6 @@ public class FeedListAdapter extends ArrayAdapter<Post> {
 
     static class ViewHolder{
         TextView tvTitle;
-//        CircleImageView ivPostImage;
         ImageView ivPostImage;
         TextView tvComments;
         TextView tvFavorite;
@@ -98,6 +97,7 @@ public class FeedListAdapter extends ArrayAdapter<Post> {
                     Log.d(TAG, "onClick: Post wasn't favorited.  Liking it now");
                     holder.tvFavorite.setTextColor(mContext.getColor(R.color.Favorite_Gold));
                     isFavorited = true;
+
                 }
 
             }
@@ -121,4 +121,5 @@ public class FeedListAdapter extends ArrayAdapter<Post> {
 
         return convertView;
     }
+
 }

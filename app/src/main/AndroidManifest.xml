@@ -14,19 +14,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".UserAccount.Account.LoginActivity">
+        <activity android:name=".UserAccount.Account.LoginActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".UserAccount.Account.RegisterActivity"/>
-        <activity android:name=".UserAccount.Account.MainActivity.MainActivity"/>
+        <activity android:name=".UserAccount.Account.RegisterActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".UserAccount.Account.MainActivity.MainActivity"
+            android:screenOrientation="portrait"/>
         <activity android:name=".UserAccount.Account.Matcher.MatcherActivity"/>
         <activity android:name=".UserAccount.Account.Profile.ProfileActivity"/>
-        <activity android:name=".UserAccount.Account.CreateNewPost.CreatePostActivity"/>
-        <activity android:name=".UserAccount.Account.Comments.CommentThreadActivity"/>
+        <activity android:name=".UserAccount.Account.CreateNewPost.CreatePostActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".UserAccount.Account.Comments.CommentThreadActivity"
+            android:screenOrientation="portrait"/>
         <activity android:name=".UserAccount.Account.PublishPost.PublishPostActivity"
             android:screenOrientation="portrait"/>
     </application>

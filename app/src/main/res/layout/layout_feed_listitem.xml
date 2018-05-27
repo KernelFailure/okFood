@@ -13,9 +13,7 @@
         android:layout_height="match_parent"
         android:background="@drawable/feed_listitem_background"
         android:scaleType="centerCrop"
-        android:src="@drawable/food_background"/>
-
-
+        android:src="@drawable/feed_listitem_background"/>
 
 
     <RelativeLayout

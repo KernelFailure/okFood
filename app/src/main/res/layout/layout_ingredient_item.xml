@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:id="@+id/relLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:layout_toLeftOf="@id/relLayout2"
+        android:background="@drawable/ingredient_background">
+
+    <ImageView
+        android:id="@+id/blackDot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_dot_black"
+        android:layout_centerVertical="true"/>
+
+    <TextView
+        android:id="@+id/tvIngredientName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/blackDot"
+        android:layout_marginLeft="10dp"
+        android:text="Pasta"
+        android:textSize="30sp"
+        android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:padding="5dp"
+        android:background="@drawable/quantity_background">
+
+        <TextView
+            android:id="@+id/tvQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20"
+            android:layout_centerVertical="true"
+            android:textSize="30sp"/>
+
+        <TextView
+            android:id="@+id/tvUnit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="mL"
+            android:layout_centerVertical="true"
+            android:textSize="30sp"
+            android:layout_toRightOf="@id/tvQuantity"
+            android:layout_marginLeft="5dp"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
